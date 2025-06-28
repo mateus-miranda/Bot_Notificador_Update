@@ -57,7 +57,7 @@ Bash
 python -m venv venv
 
 # Ativar o ambiente virtual
-No Windows:
+Windows:
 venv\Scripts\activate
 
 4. Instalar Dependências
