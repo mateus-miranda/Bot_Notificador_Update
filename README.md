@@ -4,7 +4,7 @@ Este projeto consiste em um bot em Python projetado para monitorar atualizaçõe
 
 O script foi desenvolvido para ser robusto e autônomo, podendo ser compilado em um arquivo executável (.exe) e agendado para rodar periodicamente, tornando-o uma ferramenta ideal para monitoramento de máquinas de uso contínuo, como servidores ou totens de autoatendimento.
 
-#✨ Funcionalidades Principais
+# Funcionalidades Principais
 Verificação de Updates: Conecta-se à API do Agente do Windows Update (WUA) para buscar atualizações de software pendentes.
 
 Notificações Detalhadas: Envia alertas para o Telegram contendo o nome da máquina, a quantidade de atualizações e os detalhes de cada uma (Título, KB, Tamanho).
@@ -17,7 +17,7 @@ Automação: Projetado para ser executado de forma autônoma através do Agendad
 
 Empacotamento: Pode ser facilmente compilado em um arquivo .exe único com o PyInstaller, eliminando a necessidade de uma instalação do Python na máquina alvo.
 
-#🛠️ Tecnologias Utilizadas
+# Tecnologias Utilizadas
 Python 3
 
 Bibliotecas Python:
@@ -34,7 +34,7 @@ PyInstaller: Para empacotar o script em um executável.
 
 Agendador de Tarefas do Windows: Para automação da execução.
 
-#🚀 Instalação e Configuração
+# Instalação e Configuração
 Siga os passos abaixo para configurar e executar o projeto em uma nova máquina.
 
 1. Pré-requisitos
@@ -108,7 +108,7 @@ Para executar a configuração inicial do sistema (requer privilégios de admini
 
 python main.py --configurar
 
-#📦 Transformando em um Executável (.exe)
+# Transformando em um Executável (.exe)
 Para criar um arquivo NotificadorUpdates.exe independente, utilize o PyInstaller com o seguinte comando. Ele já inclui as diretivas para lidar com a biblioteca pywin32 e para rodar de forma invisível.
 
 
@@ -116,7 +116,7 @@ pyinstaller --name "NotificadorUpdates" --onefile --windowed --hidden-import="wi
 
 O arquivo .exe final estará na pasta dist/.
 
-#⚙️ Automação com o Agendador de Tarefas do Windows
+# Automação com o Agendador de Tarefas do Windows
 
 Para que o bot monitore a máquina de forma contínua e autônoma, agende a execução do .exe criado.
 
@@ -156,7 +156,7 @@ Desmarque "Iniciar a tarefa somente se o computador estiver em alimentação CA"
 
 Clique em "OK" para salvar a tarefa.
 
-#🏗️ Estrutura do Código
+# Estrutura do Código
 main.py: Arquivo principal que contém toda a lógica.
 
 buscar_updates_windows(): Conecta-se à API do Windows para buscar atualizações pendentes.
