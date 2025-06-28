@@ -63,8 +63,6 @@ venv\Scripts\activate
 4. Instalar Dependências
 Crie um arquivo chamado requirements.txt na raiz do projeto com o seguinte conteúdo:
 
-Plaintext
-
 # Arquivo: requirements.txt
 python-telegram-bot
 pywin32
